@@ -21,10 +21,12 @@ function someFunc(num1, num2){
 
     let loopCount= num2- num1
 
-        for(let i=0; i<loopCount; i++){
-        console.log("deez " + (num1+i) + ", loops " + loopCount + " times");
+        for(let i=0; i<=loopCount; i++){
+        console.log("deez " + (num1+i));
         }
 
+    return "A";
+    // ^ STATEMENT (anything inside {}) (maybe)
 }
 
 //yfvfylfyilyil
