@@ -12,13 +12,19 @@
 // doSomething
 // ^ VARIABLE CALL EXAMPLE
 
-someFunc()
+someFunc(2, 7)
 // ^ FUNCTION/ METHOD CALL EXAMPLE
 
 
-function someFunc(){
+function someFunc(num1, num2){
     // ^ FUNCTION DECLARATION/ INITIALISATION
-    console.log("deez");
+
+    let loopCount= num2- num1
+
+        for(let i=0; i<loopCount; i++){
+        console.log("deez " + (num1+i) + ", loops " + loopCount + " times");
+        }
+
 }
 
 //yfvfylfyilyil
