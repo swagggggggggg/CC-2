@@ -12,10 +12,28 @@
 // doSomething
 // ^ VARIABLE CALL EXAMPLE
 
-someFunc(2, 7)
-addUp(5, 6)
+// someFunc(2, 7)
+// addUp(5, 6)
 // ^ FUNCTION/ METHOD CALL EXAMPLES
 
+let numOfBoxes= 7
+let boxW= 21
+let boxH= 201
+let boxSpace= 30
+
+let xOffset= 150
+let yOffset= 150
+// improve later with screenW/H.....
+ 
+
+function setup(){
+    createCanvas(500, 500);
+    background(205);
+}
+
+function draw(){
+    drawBoxes();
+}
 
 // if(x==2){
 //     console.log("hiii");
@@ -23,6 +41,20 @@ addUp(5, 6)
 // ^if statement -> CONDITIONAL STATEMENT
 // = -> ASSIGNS X VALUE 2
 // == -> CHECKS IF X EQUALS 2
+
+function drawBoxes(){
+    fill(200, 30, 140);
+    noStroke();
+
+    // rect(100, 100, 20, 20);
+    // rect(130, 100, 20, 20);
+    // rect(160, 100, 20, 20);
+    // ^ OBV GARBAGE!!!
+
+    for(let b= 0; b<numOfBoxes; b++){
+        rect(xOffset + b*boxSpace, yOffset, boxW, boxH);
+    }
+}
 
 function someFunc(num1, num2){
     // ^ FUNCTION DECLARATION/ INITIALISATION
@@ -42,4 +74,6 @@ function addUp(addNum1, addNum2){
     console.log("um");
     return G;
 }
+
+
 //yfvfylfyilyil
