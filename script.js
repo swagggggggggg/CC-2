@@ -1,4 +1,4 @@
-let distance;
+let distance= 5
 
 String "dickhead"
 Float 2
