@@ -9,10 +9,12 @@
 // Object()
 
 
-doSomething
+// doSomething
 // ^ VARIABLE CALL EXAMPLE
+
 someFunc()
 // ^ FUNCTION/ METHOD CALL EXAMPLE
+
 
 function someFunc(){
     // ^ FUNCTION DECLARATION/ INITIALISATION
