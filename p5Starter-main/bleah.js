@@ -1,12 +1,12 @@
-let distance= 5
+// let distance= 5
 
-String "dickhead"
-Float 2
-int 3
-Boolean false
-Array[]
+// String "dickhead"
+// Float 2
+// int 3
+// Boolean false
+// Array[]
 
-Object()
+// Object()
 
 
 doSomething
@@ -16,7 +16,7 @@ someFunc()
 
 function someFunc(){
     // ^ FUNCTION DECLARATION/ INITIALISATION
-    ebuj;
+    console.log("deez");
 }
 
 //yfvfylfyilyil
