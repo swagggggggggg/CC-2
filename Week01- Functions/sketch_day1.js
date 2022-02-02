@@ -18,7 +18,7 @@
 
 let numOfBoxes= 7
 let boxW= 21
-let boxH= 201
+let boxH= 21
 let boxSpace= 30
 
 let xOffset= 150
@@ -51,8 +51,10 @@ function drawBoxes(){
     // rect(160, 100, 20, 20);
     // ^ OBV GARBAGE!!!
 
-    for(let b= 0; b<numOfBoxes; b++){
-        rect(xOffset + b*boxSpace, yOffset, boxW, boxH);
+    for(let c= 0; c<numOfBoxes; c++){
+        for(let b= 0; b<numOfBoxes; b++){
+            rect(xOffset + b*boxSpace, yOffset + c*boxSpace, boxW, boxH);
+        }
     }
 }
 
