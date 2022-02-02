@@ -1,3 +1,3 @@
-# DL836 Creative Coding 2 repository for N00201066 Andrew Lewis
+# DL836 Creative Coding 2 
 
-hiiii
+hiiii this is the repository for N00201066 Andrew Lewis :)
