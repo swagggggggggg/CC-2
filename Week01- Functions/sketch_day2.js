@@ -14,3 +14,26 @@ function draw(){
 
 // myObject.age
 // will call the object and diplay the value for age- better for clarity and readability of code
+
+
+// different coordinate sytems (layers)
+
+// function setup(){
+//     ..
+//     rectMode(CENTER)
+//     angleMode(DEGREES)
+// }
+
+// function draw(){
+//     background(255);
+
+//     push()
+//     translate(50, 50)
+//     fill(255, 0, 0)
+//     rotate(..)
+//     rect(..)
+//     pop()
+
+//     rect(..)
+
+// }
