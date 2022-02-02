@@ -5,8 +5,13 @@ function boxGrid(numBoxes, strokeColor, strokeGirth){
         for(let i=0; i<numBoxes; i++){
             noFill();
             stroke(strokeColor);
-            strokeWeight(strokeGirth)
-            rect(i*boxSize, j*boxSize, boxSize, boxSize);
+            strokeWeight(strokeGirth);
+
+            push()
+            translate(i*boxSize, j*boxSize);
+            rotate(25);
+            rect(0, 0, boxSize, boxSize);
+            pop()
         }
     }
 

@@ -4,8 +4,9 @@ function setup(){
 }
 
 function draw(){
-    boxGrid(20, color(255, 20, 140), 3)
-    boxGrid(50, color("white"), 1)
+    background(0);
+    boxGrid(20, color(255, 20, 140), 3);
+    boxGrid(50, color("white"), 1);
 }
 
 
