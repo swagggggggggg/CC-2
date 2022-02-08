@@ -8,7 +8,7 @@ let spacing= 10;
 let numChecks= 10;
 let checkSpacing= chartW/numChecks;
 
-let data = [50, 110, 270, 150];
+let data = [50, 110, 270, 150, 50, 10, 15, 30, 60, 5, 40, 60, 80, 100, 120];
 
 let availableWidth= chartW- ((margin*2)+(spacing*(data.length-1)));
 let barWidth= availableWidth/ data.length;
@@ -43,13 +43,15 @@ function draw(){
         textSize(15);
         text(k*checkSpacing, -checkSpacing/3, -checkSpacing*k);
     }
-    
 
     //bars
     translate(margin, 0);
     //translates to margin from the graph's (0, 0) (aggregate translation)
     for(i= 0; i<data.length; i++){
-        fill(200);
+        // epilepsy fill (not good!)
+        // fill(random(10, 255), random(10, 255), random(10, 255));
+
+        fill(110, 40+ i*30, 130);
         noStroke();
         rect((barWidth+ spacing)* i, 0, barWidth, -data[i]);
 
