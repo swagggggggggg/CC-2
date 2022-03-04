@@ -16,7 +16,7 @@ let maxValue;
 let numPlaces= 0;
 let showValues= true;
 let showLabels= true;
-let rotateLabels= false;
+let rotateLabels= true;
 
 let scaledData = [];
 // let dataLabels = data.name;
