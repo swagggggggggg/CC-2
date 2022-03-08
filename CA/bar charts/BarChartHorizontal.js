@@ -10,7 +10,6 @@ class HBarChart {
 
         this.showLabels = showLabels;
         this.showValues = showValues;
-        this.rotateLabels= rotateLabels;
 
         this.numTicks = numTicks;
 
@@ -103,26 +102,13 @@ class HBarChart {
             }
 
             if (this.showLabels) {
-                if(this.rotateLabels){
-                    push();
-                    noStroke();
-                    fill(255);
-                    textSize(13);
-                    textAlign(LEFT, CENTER);
-                    translate(((this.barWidth + this.spacing) * i) + this.barWidth / 2, -(this.chartHeight-this.chartHeight)+10);
-                    rotate(PI/2);
-                    text(this.data[i].label, 0, 0);
-                    pop();
-                } else { 
-                    noStroke();
-                    fill(255);
-                    textSize(12);
-                    textAlign(RIGHT, CENTER);
-                    text(this.data[i].label, -10, i * (this.barWidth + this.spacing) + this.barWidth / 2);
+                noStroke();
+                fill(255);
+                textSize(12);
+                textAlign(RIGHT, CENTER);
+                text(this.data[i].label, -10, i * (this.barWidth + this.spacing) + this.barWidth / 2);
                 }
             }
-
-        }
     }
 
 
