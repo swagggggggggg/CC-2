@@ -10,6 +10,7 @@ class BarChart {
 
         this.showLabels = showLabels;
         this.showValues = showValues;
+        this.rotateLabels= rotateLabels;
 
         this.numTicks = numTicks;
 
@@ -28,7 +29,7 @@ class BarChart {
         this.tickSpace = this.chartHeight / this.numTicks;
         let listValues = this.data.map(function(x) { return x.value });
         this.maxValue = max(listValues);
-        this.tickIncrement = int(this.maxValue / this.numTicks);
+        this.tickIncrement = (this.maxValue / this.numTicks);
     }
 
     render() {
@@ -37,7 +38,7 @@ class BarChart {
         this.drawTicks();
         this.drawBars();
         this.drawAxis();
-        pop()
+        pop();
     }
 
     drawTicks() {
@@ -61,7 +62,7 @@ class BarChart {
 
     drawAxis() {
         translate(-this.margin, 0)
-            //y Axis
+        //y Axis
         strokeWeight(1);
         stroke(255);
         line(0, 0, 0, -this.chartHeight);
@@ -81,7 +82,7 @@ class BarChart {
         for (let i = 0; i < this.data.length; i++) {
             let colorNum= i%4;
 
-            fill(255);
+            fill(colors[colorNum]);
             strokeWeight(0);
             rect(i * (this.barWidth + this.spacing), 0, this.barWidth, this.scaledData(-this.data[i].value));
 
@@ -100,9 +101,9 @@ class BarChart {
                     fill(255);
                     textSize(13);
                     textAlign(LEFT, CENTER);
-                    translate(((this.barWidth + this.spacing) * i) + this.barWidth / 2, 10);
+                    translate(((this.barWidth + this.spacing) * i) + this.barWidth / 2, -(this.chartHeight-this.chartHeight)+10);
                     rotate(PI/2);
-                    text(this.data[i].label, i * (this.barWidth + this.spacing) + this.barWidth / 2, 25);
+                    text(this.data[i].label, 0, 0);
                     pop();
                 } else { 
                     noStroke();
