@@ -1,14 +1,16 @@
-let screenH= 1000;
-let screenW= 1000;
+let screenH= 900;
+let screenW= 900;
 
 let data= [
     {label: "Peaches", value: 20},
     {label: "Apples", value: 40},
     {label: "Raspberries", value: 70},
-    {label: "Coconuts", value: 35},
+    {label: "Coconuts", value: 100},
+    {label: "Pineapples", value: 25},
 ];
 
 let barChart01;
+let barChart02;
 
 let posX = 50;
 let posY = 400;
@@ -21,12 +23,6 @@ let showLabels = true;
 let showValues = true;
 
 let rotateLabels;
-
-if(data.length>4){
-    rotateLabels= true;
-} else{
-    rotateLabels= false;
-}
 
 let numTicks = 10;
 let colors;
@@ -42,7 +38,8 @@ function setup(){
         color(250, 70, 120)
     ];
 
-    barChart01= new BarChart(data)
+    barChart01= new VBarChart(data)
+    barChart02= new HBarChart(data)
 }
 
 function draw(){
@@ -50,4 +47,7 @@ function draw(){
 
     barChart01.updateValues();
     barChart01.render();
+
+    barChart02.updateValues();
+    barChart02.render();
 }
