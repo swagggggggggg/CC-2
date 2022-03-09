@@ -1,7 +1,6 @@
 class SBarChart{
     constructor(_data){
         this.stackedData = _data;
-        //I realised later I didn't need to change all the data variables to read stackedData :((
         this.title= titleStacked;
         this.posX = screenW - screenW + posX;
         this.posY = screenH - 35;
@@ -39,12 +38,28 @@ class SBarChart{
         translate(this.posX, this.posY);
         this.drawTicks();
         this.drawBars();
+        //this.drawAverageLine();
         this.drawAxis();
         pop();
     }
 
+    // will potentially be finished and working on github submission
     // drawAverageLine(){
-        
+    //     push();
+    //     translate(this.margin, 0);
+
+    //     stroke(255);
+    //     strokeCap(SQUARE);
+    //     strokeWeight(10);
+    //     beginShape(LINES);
+    //     vertex((this.barWidth + this.spacing) + this.barWidth / 2, -this.scaledData(this.stackedData[0].average));
+    //     vertex(120, -300);
+    //     // vertex(i * (this.barWidth + this.spacing) + this.barWidth / 2, this.stackedData[1].average);
+    //     endShape();
+
+    //     pop();
+
+    //     // vertex(this.barWidth/2, stackedData[i].average);
     // }
 
     drawTicks() {
@@ -98,16 +113,6 @@ class SBarChart{
 
                 noStroke();
                 rect(i * (this.barWidth + this.spacing), 0, this.barWidth, this.scaledData(-this.stackedData[i].values[w]));
-
-                // stroke(255);
-                // strokeCap(SQUARE);
-                // strokeWeight(2);
-                // beginShape(LINES);
-                // vertex(i * (this.barWidth + this.spacing) + this.barWidth / 2, this.stackedData[0].average);
-                // vertex(i * (this.barWidth + this.spacing) + this.barWidth / 2, this.stackedData[1].average);
-                // endShape();
-
-                // vertex(this.barWidth/2, stackedData[i].average);
 
                 translate(0, this.scaledData(-this.stackedData[i].values[w]));
             }

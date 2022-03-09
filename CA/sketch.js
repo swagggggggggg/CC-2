@@ -33,12 +33,6 @@ let stackedData= [
     {label: "December '21", total: 91566, values: [13113, 29460, 15614, 33369], average: [22891.5]},
 ];
 
-// for(let o= 0; o< stackedDatalength; o++){
-//     let averageeee= stackedData[o].total/stackedData[o].values.length;
-//     stackedData[o].push(averageeee);
-// };
-//this WOULD HAVE been dope.
-
 let posX = 60;
 let posY = 400;
 let chartW = 300;
