@@ -1,6 +1,7 @@
 class HBarChart {
     constructor(_data) {
         this.data = _data;
+        this.title= titleHorizontal;
         this.posX = screenW - chartW - posX;
         this.posY = posY;
         this.chartWidth = chartW;
@@ -61,9 +62,9 @@ class HBarChart {
     drawAxis() {
         //title
         fill(255);
-        textSize(30);
+        textSize(20);
         textAlign(CENTER, BOTTOM);
-        text("fart", this.chartWidth/2, -this.chartHeight);
+        text(this.title, this.chartWidth/2, -this.chartHeight- 20);
 
         //y Axis
         strokeWeight(1);
@@ -98,7 +99,7 @@ class HBarChart {
                 fill(255, 199);
                 textSize(12);
                 textAlign(LEFT, CENTER);
-                text(this.data[i].value, this.scaledData(this.data[i].value) + 3, i * (this.barWidth + this.spacing) + this.barWidth / 2);
+                text((this.data[i].value).toFixed(2), this.scaledData(this.data[i].value) + 3, i * (this.barWidth + this.spacing) + this.barWidth / 2);
             }
 
             if (this.showLabels) {

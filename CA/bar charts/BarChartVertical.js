@@ -1,6 +1,7 @@
 class VBarChart {
     constructor(_data) {
         this.data = _data;
+        this.title= titleVertical;
         this.posX = screenW - screenW + posX;
         this.posY = posY;
         this.chartWidth = chartW;
@@ -63,9 +64,9 @@ class VBarChart {
         translate(-this.margin, 0)
         //title
         fill(255);
-        textSize(30);
+        textSize(20);
         textAlign(CENTER, BOTTOM);
-        text("hiii", this.chartWidth/2, -this.chartHeight);
+        text(this.title, this.chartWidth/2, -this.chartHeight- 20);
         //y Axis
         strokeWeight(1);
         stroke(255);
@@ -95,7 +96,7 @@ class VBarChart {
                 fill(255, 199);
                 textSize(12);
                 textAlign(CENTER, BOTTOM);
-                text(this.data[i].value, i * (this.barWidth + this.spacing) + this.barWidth / 2, this.scaledData(-this.data[i].value) - 3);
+                text((this.data[i].value).toFixed(2), i * (this.barWidth + this.spacing) + this.barWidth / 2, this.scaledData(-this.data[i].value) - 3);
             }
 
             if(this.data.length>4){
