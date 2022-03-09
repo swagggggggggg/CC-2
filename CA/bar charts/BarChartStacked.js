@@ -1,6 +1,7 @@
-class SBarCHart{
+class SBarChart{
     constructor(_data){
         this.stackedData = _data;
+        //I realised later I didn't need to change all the data variables to read stackedData :((
         this.title= titleStacked;
         this.posX = screenW - screenW + posX;
         this.posY = screenH - 35;

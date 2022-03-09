@@ -5,17 +5,27 @@ let vert;
 let hori;
 let stacked;
 
-let titleVertical= "Screen Time (daily)";
-let titleHorizontal= "idk!!";
+let titleVertical= "Phone Screen Time (in hours)";
+let titleHorizontal= "Most Used Apps Over a Week (in hours)";
 let titleStacked= "Average Steps Over a Month (in weeks)";
 
 let data= [
-    {label: "Peaches", value: 20},
-    {label: "Apples", value: 40},
-    {label: "Raspberries", value: 70.65657},
-    {label: "Coconuts", value: 100},
-    {label: "Pineapples", value: 25},
+    {label: "Monday", value: 14},
+    {label: "Tuesday", value: 10},
+    {label: "Wednesday", value: 9},
+    {label: "Thursday", value: 11},
+    {label: "Friday", value: 16},
+    {label: "Saturday", value: 19},
+    {label: "Sunday", value: 18},
 ];
+
+let horizontalData= [
+    {label: "Youtube", value: 14.99},
+    {label: "Spotify", value: 20.08},
+    {label: "Instagram", value: 6.52},
+    {label: "TikTok", value: 9.88},
+    {label: "Netflix", value: 3.25},
+]
 
 let stackedData= [
     {label: "April '21", total: 33224, values: [3041, 8954, 7030, 14199], average: [8306]},
@@ -23,7 +33,13 @@ let stackedData= [
     {label: "December '21", total: 91566, values: [13113, 29460, 15614, 33369], average: [22891.5]},
 ];
 
-let posX = 50;
+// for(let o= 0; o< stackedDatalength; o++){
+//     let averageeee= stackedData[o].total/stackedData[o].values.length;
+//     stackedData[o].push(averageeee);
+// };
+//this WOULD HAVE been dope.
+
+let posX = 60;
 let posY = 400;
 let chartW = 300;
 let chartH = 300;
@@ -51,8 +67,8 @@ function setup(){
     ];
 
     vert= new VBarChart(data)
-    hori= new HBarChart(data)
-    stacked= new SBarCHart(stackedData);
+    hori= new HBarChart(horizontalData)
+    stacked= new SBarChart(stackedData);
 }
 
 function draw(){
